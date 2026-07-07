@@ -150,7 +150,6 @@
             align-items: center;
         }
 
-        /* Voltando para o formato quadrado corporativo elegante com cantos levemente lapidados */
         .hero-image video {
             width: 100%;
             max-width: 400px;
@@ -200,7 +199,7 @@
 
         .card-diferencial {
             background: var(--white);
-            padding: 3rem 2rem;
+            padding: 3rem 2.2rem;
             border-radius: 12px;
             transition: transform 0.2s ease;
         }
@@ -265,7 +264,6 @@
             align-items: center;
         }
 
-        /* Segunda foto também com o padrão quadrado moderno alinhado */
         .sobre-image img {
             width: 100%;
             max-width: 380px;
@@ -293,18 +291,21 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
+        /* AJUSTE FIXO DA IMAGEM PARA NUNCA MAIS CORTAR NO CELULAR */
         .card-contemplado img {
             width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
+            height: 280px;
+            object-fit: contain; /* Garante que a foto inteira apareça sem cortes */
+            background-color: var(--white); /* Preenche as laterais com a mesma cor do card se a foto for proporcionalmente diferente */
         }
 
         .card-contemplado-body {
             padding: 1.5rem;
             text-align: center;
+            background: var(--white);
         }
 
         .card-contemplado-body h4 {
@@ -438,6 +439,9 @@
             }
             .grid-contemplados {
                 grid-template-columns: 1fr;
+            }
+            .card-contemplado img {
+                height: 320px; /* Dá mais espaço vertical em telas mobile */
             }
         }
     </style>
