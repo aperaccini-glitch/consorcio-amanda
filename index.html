@@ -12,11 +12,10 @@
             --primary: #0F2A4A;     
             --accent: #F4C11E;      
             --dark: #0F172A;        
-            --light: #F8FAFC;       
+            --light: #EAEAEA;       /* TOM EXATO DO FUNDO DA SUA FOTO PARA INTEGRAÇÃO TOTAL */
             --white: #FFFFFF;       
             --gray: #475569;        
-            --border: #E2E8F0;      
-            --photo-bg: #EAEAEA; /* Cor exata do fundo cinza das suas fotos para integração total */
+            --border: #D1D5DB;      
         }
 
         * {
@@ -33,7 +32,7 @@
             line-height: 1.6;
         }
 
-        /* Menu Superior com Fundo Escuro para preservar as cores originais da Logo */
+        /* Menu Superior */
         header {
             background: var(--primary);
             padding: 1.1rem 2rem;
@@ -54,7 +53,6 @@
         .logo img {
             height: 42px;
             object-fit: contain;
-            filter: none !important; /* Remove qualquer alteração de cor da logo */
         }
 
         .nav-links {
@@ -123,11 +121,10 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section Claríssima com Grid Alinhado */
+        /* Hero Section com o mesmo fundo cinza */
         .hero {
-            background: var(--white);
+            background: var(--light);
             padding: 0 2rem;
-            border-bottom: 1px solid var(--border);
             overflow: hidden;
         }
 
@@ -141,7 +138,7 @@
         }
 
         .hero-text {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
 
         .hero-text h1 {
@@ -164,22 +161,19 @@
             max-width: 580px;
         }
 
-        /* Bloco de imagem integrado de verdade ao fundo */
         .hero-image {
             display: flex;
             justify-content: center;
             align-items: flex-end;
             height: 100%;
-            background: linear-gradient(to right, var(--white) 0%, transparent 15%, transparent 85%, var(--white) 100%);
         }
 
         .hero-image img {
             width: 100%;
-            max-width: 420px;
+            max-width: 440px;
             height: auto;
             object-fit: cover;
             display: block;
-            border-radius: 24px 24px 0 0;
         }
 
         section {
@@ -221,15 +215,14 @@
             background: var(--white);
             padding: 3rem 2.2rem;
             border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .card-diferencial:hover {
             transform: translateY(-6px);
-            box-shadow: 0 20px 30px rgba(15, 42, 74, 0.04);
-            border-color: rgba(15, 42, 74, 0.12);
+            box-shadow: 0 20px 30px rgba(15, 42, 74, 0.06);
         }
 
         .card-diferencial .icon {
@@ -257,11 +250,9 @@
             font-size: 1rem;
         }
 
-        /* Seção Quem Sou com caixa integrada de imagem */
+        /* Seção Quem Sou */
         .sobre {
-            background: var(--white);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            background: var(--light);
         }
 
         .sobre-container {
@@ -287,14 +278,12 @@
         .sobre-image {
             display: flex;
             justify-content: center;
-            background: var(--white);
         }
 
         .sobre-image img {
             width: 100%;
             max-width: 380px;
             border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
         }
 
         .prova-social {
@@ -311,8 +300,8 @@
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            border: 1px solid var(--border);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
             transition: transform 0.3s ease;
         }
 
@@ -363,7 +352,7 @@
             top: 0;
             width: 48px;
             height: 48px;
-            background: rgba(15, 42, 74, 0.06);
+            background: var(--white);
             color: var(--primary);
             border-radius: 50%;
             display: flex;
@@ -371,6 +360,7 @@
             justify-content: center;
             font-weight: 800;
             font-size: 1.15rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
 
         .passo-item h3 {
@@ -385,8 +375,7 @@
         }
 
         .cta-final {
-            background: var(--white);
-            border-top: 1px solid var(--border);
+            background: var(--light);
             text-align: center;
             padding: 6.5rem 2rem;
         }
@@ -406,12 +395,11 @@
         }
 
         footer {
-            background: var(--white);
+            background: var(--primary);
             padding: 2.5rem 2rem;
             text-align: center;
-            color: var(--gray);
+            color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
-            border-top: 1px solid var(--border);
         }
 
         .whatsapp-float {
@@ -521,7 +509,7 @@
                 <div class="card-diferencial">
                     <div class="icon">💰</div>
                     <h3>Poder de Compra à Vista</h3>
-                    <p>Ao ser contemplado, você dita as regras na concessionária ou proprietário, garantindo descontos agressivos na negociação.</p>
+                    <p>Ao ser contemplado, você dita as regras na concessionária ou proprietário, garantindo discounts agressivos na negociação.</p>
                 </div>
             </div>
         </div>
@@ -592,7 +580,7 @@
                 <div class="passo-item">
                     <div class="passo-num">1</div>
                     <h3>Estudo de Perfil</h3>
-                    <p>Mapeamos seu objectivo patrimonial e capacidade de aporte mensal para blindar seu orçamento de surpresas.</p>
+                    <p>Mapeamos seu objetivo patrimonial e capacidade de aporte mensal para blindar seu orçamento de surpresas.</p>
                 </div>
                 <div class="passo-item">
                     <div class="passo-num">2</div>
@@ -621,7 +609,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Amanda Peraccini - Consultora Autorizada Consórcio Comauto. Todos os direitos reservados.</p>
-            <p style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--gray);">Entregas reais documentadas mediante autorização expressa dos clientes contemplados.</p>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; color: rgba(255,255,255,0.5);">Entregas reais documentadas mediante autorização expressa dos clientes contemplados.</p>
         </div>
     </footer>
 
