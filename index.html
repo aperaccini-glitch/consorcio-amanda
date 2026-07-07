@@ -150,15 +150,17 @@
             align-items: center;
         }
 
-        /* Mudando o vídeo principal para um formato redondo minimalista de alta classe */
+        /* Voltando para o formato quadrado corporativo elegante com cantos levemente lapidados */
         .hero-image video {
-            width: 340px;
-            height: 340px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 4 / 5;
             object-fit: cover;
             display: block;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         section {
@@ -238,7 +240,7 @@
 
         .sobre-container {
             display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
+            grid-template-columns: 0.9fr 1.1fr;
             gap: 5rem;
             align-items: center;
         }
@@ -263,21 +265,22 @@
             align-items: center;
         }
 
-        /* Transformando a segunda foto em redondo de perfil também para manter a identidade uniforme */
+        /* Segunda foto também com o padrão quadrado moderno alinhado */
         .sobre-image img {
-            width: 320px;
-            height: 320px;
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            aspect-ratio: 4 / 5;
             object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .prova-social {
             background: var(--light);
         }
 
-        /* Ajuste na grade para evitar quebras ou cortes nos celulares */
         .grid-contemplados {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -292,7 +295,6 @@
             flex-direction: column;
         }
 
-        /* Altura adaptável e proporcional para nunca cortar as fotos dos clientes */
         .card-contemplado img {
             width: 100%;
             height: auto;
@@ -416,7 +418,6 @@
             fill: #FFFFFF;
         }
 
-        /* Ajustes responsivos para celulares de todos os tamanhos */
         @media (max-width: 768px) {
             .hero-container, .sobre-container {
                 grid-template-columns: 1fr;
@@ -429,14 +430,6 @@
             .hero-text h1 {
                 font-size: 2.2rem;
             }
-            .hero-image video {
-                width: 260px;
-                height: 260px;
-            }
-            .sobre-image img {
-                width: 240px;
-                height: 240px;
-            }
             .nav-links {
                 display: none;
             }
@@ -444,7 +437,7 @@
                 padding: 5rem 1.5rem;
             }
             .grid-contemplados {
-                grid-template-columns: 1fr; /* Força uma coluna perfeita e limpa no mobile */
+                grid-template-columns: 1fr;
             }
         }
     </style>
