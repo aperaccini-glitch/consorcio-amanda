@@ -150,16 +150,17 @@
             align-items: center;
         }
 
+        /* AJUSTE DO VÍDEO PARA PRESERVAR O TAMANHO ORIGINAL SEM CORTES */
         .hero-image video {
             width: 100%;
             max-width: 400px;
-            height: auto;
-            aspect-ratio: 4 / 5;
-            object-fit: cover;
+            height: auto; /* Deixa a altura livre para respeitar o tamanho do arquivo original */
+            object-fit: contain; /* Garante tamanho original e impede cortes */
             display: block;
             border-radius: 16px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.06);
             border: 1px solid rgba(0,0,0,0.05);
+            background-color: transparent;
         }
 
         section {
@@ -294,12 +295,11 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
-        /* AJUSTE FIXO DA IMAGEM PARA NUNCA MAIS CORTAR NO CELULAR */
         .card-contemplado img {
             width: 100%;
             height: 280px;
-            object-fit: contain; /* Garante que a foto inteira apareça sem cortes */
-            background-color: var(--white); /* Preenche as laterais com a mesma cor do card se a foto for proporcionalmente diferente */
+            object-fit: contain; 
+            background-color: var(--white); 
         }
 
         .card-contemplado-body {
@@ -441,7 +441,7 @@
                 grid-template-columns: 1fr;
             }
             .card-contemplado img {
-                height: 320px; /* Dá mais espaço vertical em telas mobile */
+                height: 320px; 
             }
         }
     </style>
