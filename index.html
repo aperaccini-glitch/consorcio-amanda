@@ -12,7 +12,7 @@
             --primary: #0F2A4A;     
             --accent: #F4C11E;      
             --dark: #0F172A;        
-            --light: #EAEAEA;       /* TOM EXATO DO FUNDO DA SUA FOTO PARA INTEGRAÇÃO TOTAL */
+            --light: #EAEAEA;       
             --white: #FFFFFF;       
             --gray: #475569;        
             --border: #D1D5DB;      
@@ -32,7 +32,6 @@
             line-height: 1.6;
         }
 
-        /* Menu Superior */
         header {
             background: var(--primary);
             padding: 1.1rem 2rem;
@@ -121,7 +120,6 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Section com o mesmo fundo cinza */
         .hero {
             background: var(--light);
             padding: 0 2rem;
@@ -161,6 +159,7 @@
             max-width: 580px;
         }
 
+        /* Container do Vídeo integrado */
         .hero-image {
             display: flex;
             justify-content: center;
@@ -168,12 +167,14 @@
             height: 100%;
         }
 
-        .hero-image img {
+        /* Estilização para o vídeo se misturar perfeitamente */
+        .hero-image video {
             width: 100%;
             max-width: 440px;
             height: auto;
             object-fit: cover;
             display: block;
+            border-radius: 24px 24px 0 0;
         }
 
         section {
@@ -250,7 +251,6 @@
             font-size: 1rem;
         }
 
-        /* Seção Quem Sou */
         .sobre {
             background: var(--light);
         }
@@ -478,7 +478,11 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="amanda.jpeg" alt="Amanda Peraccini">
+                <!-- TAG DE VÍDEO CONTEXTUALIZADA E CONFIGURADA -->
+                <video autoplay loop muted playsinline>
+                    <source src="amanda.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
             </div>
         </div>
     </section>
@@ -509,7 +513,7 @@
                 <div class="card-diferencial">
                     <div class="icon">💰</div>
                     <h3>Poder de Compra à Vista</h3>
-                    <p>Ao ser contemplado, você dita as regras na concessionária ou proprietário, garantindo discounts agressivos na negociação.</p>
+                    <p>Ao ser contemplado, você dita as regras na concessionária ou proprietário, garantindo descontos agressivos na negociação.</p>
                 </div>
             </div>
         </div>
